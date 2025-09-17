@@ -6,7 +6,7 @@ import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
-    Button btnLogin, btnSignup;
+    Button btnLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,9 +15,7 @@ public class MainActivity extends AppCompatActivity {
 
         btnLogin = findViewById(R.id.btnLogin);
 
-        // Go to Login Page
         btnLogin.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, LoginActivity.class)));
-
     }
 }

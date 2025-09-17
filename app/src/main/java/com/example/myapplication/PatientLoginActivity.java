@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,12 +23,14 @@ public class PatientLoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(v -> {
             String email = edtEmail.getText().toString();
             String password = edtPassword.getText().toString();
-
             if(email.equals("patient@example.com") && password.equals("1234")) {
                 Toast.makeText(this, "Patient Login Successful", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(PatientLoginActivity.this, PatientDashboardActivity.class));
+                finish(); // optional: closes login screen
             } else {
                 Toast.makeText(this, "Invalid Patient Credentials", Toast.LENGTH_SHORT).show();
             }
+
         });
     }
 }

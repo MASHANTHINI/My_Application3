@@ -1,4 +1,4 @@
-package com.example.panchakarma;
+package com.example.myapplication;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,33 +6,51 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "panchakarma.db";
-    private static final int DB_VERSION = 1;
+
+    // Database info
+    private static final String DATABASE_NAME = "Clinic.db";
+    private static final int DATABASE_VERSION = 1;
+
+    // Table info
+    private static final String TABLE_PATIENT = "patients";
+    private static final String COL_ID = "id";
+    private static final String COL_NAME = "name";
+    private static final String COL_AGE = "age";
+    private static final String COL_THERAPY = "therapy";
 
     public DatabaseHelper(Context context) {
-        super(context, DB_NAME, null, DB_VERSION);
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE patients(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age TEXT, therapy TEXT)");
-        db.execSQL("CREATE TABLE schedule(id INTEGER PRIMARY KEY AUTOINCREMENT, patientId INTEGER, date TEXT, time TEXT)");
+        // Create patients table
+        String createTable = "CREATE TABLE " + TABLE_PATIENT + " ("
+                + COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + COL_NAME + " TEXT, "
+                + COL_AGE + " TEXT, "
+                + COL_THERAPY + " TEXT)";
+        db.execSQL(createTable);
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase db, int oldV, int newV) {
-        db.execSQL("DROP TABLE IF EXISTS patients");
-        db.execSQL("DROP TABLE IF EXISTS schedule");
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        // Drop old table and create new one
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_PATIENT);
         onCreate(db);
     }
 
+    // Insert patient into DB
     public boolean addPatient(String name, String age, String therapy) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues cv = new ContentValues();
-        cv.put("name", name);
-        cv.put("age", age);
-        cv.put("therapy", therapy);
-        long result = db.insert("patients", null, cv);
-        return result != -1;
+        cv.put(COL_NAME, name);
+        cv.put(COL_AGE, age);
+        cv.put(COL_THERAPY, therapy);
+
+        long result = db.insert(TABLE_PATIENT, null, cv);
+        db.close();
+
+        return result != -1; // if -1, insert failed
     }
 }
