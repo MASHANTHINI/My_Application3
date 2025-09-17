@@ -21,6 +21,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".DoctorLoginActivity"></activity>
+        <activity android:name=".DoctorSignupActivity"></activity>
+        <activity android:name=".PatientFormActivity"></activity>
+        <activity android:name=".PatientSignupActivity"></activity>
+        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".PatientLoginActivity"></activity>
+        <activity android:name=".PatientDashboardActivity" />
     </application>
 
 </manifest>
