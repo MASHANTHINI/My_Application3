@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="tvDoctorName" type="id" />
+    <item name="tvTimer" type="id" />
+    <item name="btnEndCall" type="id" />
+    <item name="patientVideo" type="id" />
+    <item name="doctorVideo" type="id" />
+</resources>

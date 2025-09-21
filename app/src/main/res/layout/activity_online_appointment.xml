@@ -1,28 +1,34 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:padding="20dp"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"> <!-- centers both horizontally and vertically -->
+    android:padding="16dp">
 
     <EditText
-        android:id="@+id/edtEmail"
-        android:hint="Patient Email"
+        android:id="@+id/edtDate"
+        android:hint="Enter Date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"/>
 
     <EditText
-        android:id="@+id/edtPassword"
-        android:hint="Password"
-        android:inputType="textPassword"
+        android:id="@+id/edtTime"
+        android:hint="Enter Time"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"/>
 
     <Button
-        android:id="@+id/btnLogin"
-        android:text="Patient Login"
+        android:id="@+id/btnConfirm"
+        android:text="Confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnBack"
+        android:text="Back to Dashboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 </LinearLayout>
