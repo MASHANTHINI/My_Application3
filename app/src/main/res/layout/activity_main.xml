@@ -10,7 +10,7 @@
     <!-- App Title -->
     <TextView
         android:id="@+id/tvWelcome"
-        android:text="Welcome to Panchakarma Management"
+        android:text="Welcome to Panchakarman  Patient  Management"
         android:textSize="22sp"
         android:textStyle="bold"
         android:textColor="@android:color/black"

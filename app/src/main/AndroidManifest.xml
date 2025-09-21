@@ -29,6 +29,16 @@
         <activity android:name=".SignupActivity"></activity>
         <activity android:name=".PatientLoginActivity"></activity>
         <activity android:name=".PatientDashboardActivity" />
+        <activity android:name=".BookAppointmentActivity"/>
+        <activity android:name=".DoctorListActivity"/>
+        <activity android:name=".AppointmentTypeActivity"/>
+        <activity android:name=".OnlineAppointmentActivity"/>
+        <activity android:name=".OfflineAppointmentActivity"/>
+        <activity android:name=".VideoCallSetupActivity"/>
+        <activity android:name=".ScheduledVideoCallActivity"/>
+        <activity android:name=".ScheduledCallsActivity"/>
+
+
     </application>
 
 </manifest>
