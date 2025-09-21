@@ -3,7 +3,10 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class PatientDashboardActivity extends AppCompatActivity {
@@ -38,7 +41,13 @@ public class PatientDashboardActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        btnDemoVideos.setOnClickListener(v ->
-                Toast.makeText(this, "Demo Videos clicked", Toast.LENGTH_SHORT).show());
+        // --- Edited Demo Videos Button ---
+        btnDemoVideos.setOnClickListener(v -> {
+            // Simply open DemoActivity
+            Intent intent = new Intent(PatientDashboardActivity.this, DemoActivity.class);
+            startActivity(intent);
+        });
+
+
     }
 }

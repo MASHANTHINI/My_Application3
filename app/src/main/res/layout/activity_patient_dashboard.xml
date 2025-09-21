@@ -1,48 +1,36 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp">
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:gravity="center"
+    <Button
+        android:id="@+id/btnProgress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:text="Progress"/>
 
-        <Button
-            android:id="@+id/btnProgress"
-            android:text="Progress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+    <Button
+        android:id="@+id/btnAppointment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Book Appointment"/>
 
-        <Button
-            android:id="@+id/btnAppointment"
-            android:text="Book Appointment"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+    <Button
+        android:id="@+id/btnNearby"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nearby Centres"/>
 
-        <Button
-            android:id="@+id/btnNearby"
-            android:text="Nearby Centres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
+    <Button
+        android:id="@+id/btnVideoCall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Schedule Video Call"/>
 
-        <Button
-            android:id="@+id/btnVideoCall"
-            android:text="Scheduled Video Calls"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
-
-        <Button
-            android:id="@+id/btnDemoVideos"
-            android:text="Demo Videos"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"/>
-
-    </LinearLayout>
-</ScrollView>
+    <Button
+        android:id="@+id/btnDemoVideos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Demo Videos"/>
+</LinearLayout>

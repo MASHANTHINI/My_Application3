@@ -24,6 +24,7 @@
         <activity android:name=".LoginActivity"></activity>
         <activity android:name=".DoctorLoginActivity"></activity>
         <activity android:name=".DoctorSignupActivity"></activity>
+        <activity android:name=".DemoActivity"></activity>
         <activity android:name=".PatientFormActivity"></activity>
         <activity android:name=".PatientSignupActivity"></activity>
         <activity android:name=".SignupActivity"></activity>
