@@ -26,22 +26,55 @@ public class DoctorListActivity extends AppCompatActivity {
 
         String disease = getIntent().getStringExtra("disease");
 
-        txtTitle.setText("Doctors for: " + disease);
+        txtTitle.setText("Ayurvedic Doctors for: " + disease);
 
         List<String> doctors = new ArrayList<>();
 
         switch (disease.toLowerCase()) {
-            case "heart":
-                doctors.add("Dr. Ramesh - Cardiologist");
-                doctors.add("Dr. Priya - Cardiologist");
+            case "arthritis":
+            case "joint pain":
+                doctors.add("Dr. Anil – Panchakarma Specialist (Arthritis & Vasti)");
+                doctors.add("Dr. Kavya – Ayurveda Physician (Abhyanga & Joint Care)");
                 break;
-            case "diabetes":
-                doctors.add("Dr. Meena - Endocrinologist");
-                doctors.add("Dr. Ravi - Diabetes Specialist");
+
+            case "skin":
+            case "psoriasis":
+            case "eczema":
+                doctors.add("Dr. Lakshmi – Panchakarma & Skin Specialist (Virechana, Raktamokshana)");
+                doctors.add("Dr. Manoj – Ayurveda Consultant (Herbal Skin Therapies)");
                 break;
+
+            case "digestion":
+            case "acidity":
+            case "ibs":
+                doctors.add("Dr. Priya – Ayurveda Physician (Virechana & Gut Health)");
+                doctors.add("Dr. Arun – Panchakarma Expert (Vamana, Pitta Balance)");
+                break;
+
+            case "stress":
+            case "anxiety":
+            case "insomnia":
+                doctors.add("Dr. Rekha – Panchakarma Therapist (Shirodhara, Nasya)");
+                doctors.add("Dr. Vivek – Ayurveda Psychosomatic Specialist");
+                break;
+
+            case "obesity":
+            case "weight":
+                doctors.add("Dr. Swathi – Panchakarma Doctor (Udvartana, Vamana)");
+                doctors.add("Dr. Sanjay – Lifestyle & Diet Ayurveda Expert");
+                break;
+
+            case "neurological":
+            case "sciatica":
+            case "paralysis":
+            case "migraine":
+                doctors.add("Dr. Meera – Panchakarma & Neuro Specialist (Basti, Shirodhara)");
+                doctors.add("Dr. Rajesh – Ayurveda Consultant (Neurological Disorders)");
+                break;
+
             default:
-                doctors.add("Dr. Lakshmi - General Physician");
-                doctors.add("Dr. Kumar - Family Doctor");
+                doctors.add("Dr. Suresh – General Ayurveda Physician");
+                doctors.add("Dr. Divya – Panchakarma Consultant");
                 break;
         }
 
