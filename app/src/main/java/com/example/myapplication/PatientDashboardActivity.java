@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -11,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class PatientDashboardActivity extends AppCompatActivity {
 
-    Button btnProgress, btnAppointment, btnNearby, btnVideoCall, btnDemoVideos;
+    Button btnProgress, btnAppointment,btnPatientHistory , btnNearby, btnVideoCall, btnDemoVideos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,7 @@ public class PatientDashboardActivity extends AppCompatActivity {
         btnNearby = findViewById(R.id.btnNearby);
         btnVideoCall = findViewById(R.id.btnVideoCall);
         btnDemoVideos = findViewById(R.id.btnDemoVideos);
+        btnPatientHistory = findViewById(R.id.btnPatientHistory);
 
         btnProgress.setOnClickListener(v ->
                 Toast.makeText(this, "Progress section clicked", Toast.LENGTH_SHORT).show());
@@ -45,6 +47,10 @@ public class PatientDashboardActivity extends AppCompatActivity {
         btnDemoVideos.setOnClickListener(v -> {
             // Simply open DemoActivity
             Intent intent = new Intent(PatientDashboardActivity.this, DemoActivity.class);
+            startActivity(intent);
+        });
+        btnPatientHistory.setOnClickListener(v -> {
+            Intent intent = new Intent(PatientDashboardActivity.this, PatientHistoryActivity.class);
             startActivity(intent);
         });
 
