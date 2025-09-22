@@ -38,6 +38,7 @@
         <activity android:name=".VideoCallSetupActivity"/>
         <activity android:name=".ScheduledVideoCallActivity"/>
         <activity android:name=".ScheduledCallsActivity"/>
+        <activity android:name=".PatientHistoryActivity"/>
 
 
     </application>
